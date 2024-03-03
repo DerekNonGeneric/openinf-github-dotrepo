@@ -30,7 +30,7 @@
     "-c",
     "echoerr() { printf \"%s\n\" \"$*\" >&2; }",
     "-c",
-    "(>&2 echo 'hey diddle diddle' >>>> /var/logs/garbage.log)"
+    "(>&2 echo 'hey diddle diddle' >> /var/logs/garbage.log)"
   ],
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": ["/bin/sh", "-c", "(echo /var/logs/garbage.log)"],
